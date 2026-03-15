@@ -5,7 +5,7 @@ import com.elias.emailsender.model.dto.EmailRequest;
 import com.elias.emailsender.model.dto.WelcomeRequest;
 
 
-public interface IEMailSenderService {
+public interface IEmailSenderService {
 
     void sendEmail(EmailRequest request);
 

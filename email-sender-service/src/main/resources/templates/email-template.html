@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email</title>
+    </head>
+    <body style="margin: 0;">
+
+        <div style="font-family: Arial, sans-serif; padding: 40px; border: 1px solid #ddd;
+         border-radius: 10px; max-width: 600px; margin: auto;">
+
+            <header style="text-align: center; color: #007bff;">
+                <img th:src="|cid:logo-image|" alt="Logo" style="width: 80px;">
+                <h1>Hello, <span th:text="${username}">User</span></h1>
+            </header>
+
+            <main >
+                <p> Welcome to my <strong>Notification Service</strong>.<p>
+                <p>This is a demonstration of my dynamic email delivery system, created with <strong>Spring Boot</strong>, <strong>Java Mail Sender</strong>, and <strong>Thymeleaf</strong>.</p>
+                <hr>
+                <p th:text="${messageContent}">. . .</p>
+            </main>
+
+            <footer style="font-size: small; color: #777777; margin-top: 20px;">
+                <p>Best regards,<br>
+                    <strong>Elias Diaz | Software Developer</strong></p>
+                <p style="font-style: italic;">This is an automated message, please do not reply.</p>
+            </footer>
+
+        </div>
+    </body>
+</html>
