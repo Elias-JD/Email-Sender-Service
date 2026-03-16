@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: email-sender-api
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_MAIL_USERNAME=${MAIL_USER}
+      - SPRING_MAIL_PASSWORD=${MAIL_PASS}
+    restart: unless-stopped
+
+networks:
+  default:
+    name: email-network
